@@ -24,4 +24,9 @@ public class usuarios_Service {
     public boolean createUsuario(usuarios usuario){
         return this.usuarios_repository.create(usuario);
     }
+
+    public boolean insertarUsuario(usuarios usuario) {
+        usuarios_Repository repo = new usuarios_Repository(connection);
+        return repo.insertar(usuario);
+    }
 }
