@@ -1,6 +1,8 @@
 package repositories;
 
 import models.usuarios;
+import utils.ConnectionDatabase;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,5 +57,24 @@ public class usuarios_Repository {
             return false;
         }
         return true;
+    }
+
+    public boolean insertar(usuarios usuario) { //esto no hacerlo, es de otra cosa.
+        String sql = "INSERT INTO usuarios (nombre, correo, clave) VALUES (?, ?, ?)";
+
+        try (Connection conn = ConnectionDatabase.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, usuario.getId());
+            ps.setString(2, usuario.getNombre_completo());
+            ps.setString(3, usuario.getCorreo());
+            ps.setString(4, usuario.getUsername());
+            ps.setString(5, usuario.getPassword());
+            ps.setString(6, usuario.getRol());
+
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
