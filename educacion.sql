@@ -90,3 +90,20 @@ VALUES ('PR001', 'Sistema de Gestión Escolar', 'Desarrollar un sistema para ges
 
 SELECT * FROM proyectos;
 
+
+
+INSERT INTO grupos_semestrales (id, nombre, profesor_id, materia, descripcion, semestre)
+VALUES 
+('GS001', 'Grupo Ingeniería Software I', 'P001', 'Ingeniería de Software', 'Grupo enfocado en fundamentos de ingeniería de software.', '2025-1');
+
+INSERT INTO grupos_semestrales (id, nombre, profesor_id, materia, descripcion, semestre)
+VALUES 
+('GS002', 'Grupo Redes Avanzadas', 'E001', 'Redes de Computadoras', 'Estudio avanzado sobre redes y protocolos.', '2025-1');
+
+INSERT INTO grupos_semestrales (id, nombre, profesor_id, materia, descripcion, semestre)
+VALUES 
+('GS003', 'Grupo Seguridad Informática', '230221012', 'Ciberseguridad', 'Grupo centrado en prácticas de seguridad y hacking ético.', '2025-2');
+
+SELECT * FROM grupos_semestrales;
+
+

@@ -5,13 +5,13 @@ import services.grupos_semestrales_Service;
 
 import java.util.List;
 
-public class grupos_semestralesBean {
+public class Grupos_semestralesBean {
 
     private grupos_semestrales_Service grupos_semestrales_service;
     private List<grupos_semestrales> lista_grupos_semestrales;
     private grupos_semestrales grupo_semestral;
 
-    public grupos_semestralesBean() {
+    public Grupos_semestralesBean() {
         grupos_semestrales_service = new grupos_semestrales_Service();
         this.lista_grupos_semestrales = this.grupos_semestrales_service.getGrupos_semestrales();
     }
