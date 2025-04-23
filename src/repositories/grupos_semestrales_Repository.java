@@ -1,7 +1,6 @@
 package repositories;
 
 import models.grupos_semestrales;
-import utils.ConnectionDatabase;
 
 import java.sql.*;
 import java.util.ArrayList;

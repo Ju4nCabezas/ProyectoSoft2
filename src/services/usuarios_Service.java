@@ -7,7 +7,6 @@ import utils.ConnectionDatabase;
 import java.sql.Connection;
 import java.util.List;
 
-
 public class usuarios_Service {
     private usuarios_Repository usuarios_repository;
     private Connection connection;
@@ -25,8 +24,4 @@ public class usuarios_Service {
         return this.usuarios_repository.create(usuario);
     }
 
-    public boolean insertarUsuario(usuarios usuario) { //No hacer este tampoco
-        usuarios_Repository repo = new usuarios_Repository(connection);
-        return repo.insertar(usuario);
-    }
 }

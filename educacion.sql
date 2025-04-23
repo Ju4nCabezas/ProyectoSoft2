@@ -106,4 +106,9 @@ VALUES
 
 SELECT * FROM grupos_semestrales;
 
+CREATE ROLE anon NOLOGIN;
+GRANT SELECT ON grupos_semestrales TO anon;
+GRANT SELECT ON usuarios TO anon;
+
+
 
