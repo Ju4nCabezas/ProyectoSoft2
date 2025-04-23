@@ -7,21 +7,21 @@ import java.util.List;
 
 public class UsuariosBean {
 
-    private usuarios_Service usuariosService;
+    private usuarios_Service usuarios_service;
     private List<usuarios> listaUsuarios;
     private usuarios usuario;
 
     public UsuariosBean() {
-        usuariosService = new usuarios_Service();
-        this.listaUsuarios = this.usuariosService.getUsuarios();
+        usuarios_service = new usuarios_Service();
+        this.listaUsuarios = this.usuarios_service.getUsuarios();
     }
 
     public void listarUsuarios(){
-        this.listaUsuarios = this.usuariosService.getUsuarios();
+        this.listaUsuarios = this.usuarios_service.getUsuarios();
     }
 
-    public usuarios_Service getUsuariosService() {
-        return usuariosService;
+    public usuarios_Service getUsuarios_service() {
+        return usuarios_service;
     }
 
     public List<usuarios> getListaUsuarios() {
@@ -35,7 +35,7 @@ public class UsuariosBean {
     }
 
     public void crearUsuario(){
-        this.usuariosService.createUsuario(this.usuario);
+        this.usuarios_service.createUsuario(this.usuario);
         listarUsuarios();
         this.usuario = new usuarios();
         System.out.println("Usuario creado");

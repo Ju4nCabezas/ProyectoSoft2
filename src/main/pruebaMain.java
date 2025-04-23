@@ -2,12 +2,15 @@ package main;
 
 import controllers.UsuariosBean;
 import models.usuarios;
+import controllers.Grupos_semestralesBean;
+
 
 import java.util.Scanner;
 
 public class pruebaMain {
     public static void main(String[] args) {
         UsuariosBean usuariosBean = new UsuariosBean();
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("=== Sistema de Gestión de Usuarios ===");
@@ -48,5 +51,19 @@ public class pruebaMain {
             System.out.println("Rol: " + u.getRol());
             System.out.println("---------------------------");
         });
+
+        Grupos_semestralesBean grupos_semestralesBean = new Grupos_semestralesBean();
+        System.out.println("\n=== Lista de Grupos Semestrales ===");
+        grupos_semestralesBean.getLista_grupos_semestrales().forEach(grupo -> {
+            System.out.println("ID: " + grupo.getId());
+            System.out.println("Nombre: " + grupo.getNombre());
+            System.out.println("ID del profesor: " + grupo.getProfesor_id());
+            System.out.println("Materia: " + grupo.getMateria());
+            System.out.println("Descripcion: " + grupo.getDescripcion());
+            System.out.println("Semestre: " + grupo.getSemestre());
+            System.out.println("---------------------------");
+        });
+
     }
+
 }

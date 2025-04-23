@@ -7,7 +7,6 @@ import utils.ConnectionDatabase;
 import java.sql.Connection;
 import java.util.List;
 
-
 public class usuarios_Service {
     private usuarios_Repository usuarios_repository;
     private Connection connection;
@@ -24,4 +23,5 @@ public class usuarios_Service {
     public boolean createUsuario(usuarios usuario){
         return this.usuarios_repository.create(usuario);
     }
+
 }
