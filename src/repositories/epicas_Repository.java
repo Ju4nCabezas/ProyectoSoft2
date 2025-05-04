@@ -21,6 +21,7 @@ public class epicas_Repository {
                 e.setId(rs.getString("id"));
                 e.setProyecto_id(rs.getString("proyecto_id"));
                 e.setDescripcion(rs.getString("descripcion"));
+                e.setNombre(rs.getString("nombre"));
                 epica.add(e);
 
             }
@@ -34,10 +35,11 @@ public class epicas_Repository {
 
     public boolean create(epicas epica) {
         try{
-            PreparedStatement ps = this.connection.prepareStatement("INSERT INTO epicas (id, proyecto_id, descripcion) VALUES (?,?,?)");
+            PreparedStatement ps = this.connection.prepareStatement("INSERT INTO epicas (id, proyecto_id, descripcion, nombre) VALUES (?,?,?,?)");
             ps.setString(1, epica.getId());
             ps.setString(2, epica.getProyecto_id());
             ps.setString(3, epica.getDescripcion());
+            ps.setString(4, epica.getNombre());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException er) {

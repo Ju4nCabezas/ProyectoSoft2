@@ -23,7 +23,6 @@ public class usuarios_Repository {
                 us.setId(rs.getString("id"));
                 us.setNombre_completo(rs.getString("nombre_completo"));
                 us.setCorreo(rs.getString("correo"));
-                us.setUsername(rs.getString("username"));
                 us.setPassword(rs.getString("password"));
                 us.setRol(rs.getString("rol"));
                 usuario.add(us);
@@ -42,13 +41,12 @@ public class usuarios_Repository {
 
     public boolean create(usuarios usuario) {
         try {
-            PreparedStatement ps = this.connection.prepareStatement("INSERT INTO usuarios (id,nombre_completo,correo,username,password,rol) VALUES (?,?,?,?,?,?)");
+            PreparedStatement ps = this.connection.prepareStatement("INSERT INTO usuarios (id,nombre_completo,correo,password,rol) VALUES (?,?,?,?,?)");
             ps.setString(1,usuario.getId());
             ps.setString(2,usuario.getNombre_completo());
             ps.setString(3,usuario.getCorreo());
-            ps.setString(4,usuario.getUsername());
-            ps.setString(5,usuario.getPassword());
-            ps.setString(6,usuario.getRol());
+            ps.setString(4,usuario.getPassword());
+            ps.setString(5,usuario.getRol());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException e) {

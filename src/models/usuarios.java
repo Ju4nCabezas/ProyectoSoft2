@@ -4,17 +4,15 @@ public class usuarios {
     private String id;
     private String nombre_completo;
     private String correo;
-    private String username;
     private String password;
     private String rol;
 
     public usuarios() {}
 
-    public usuarios(String id, String nombre_completo, String correo, String username, String password, String rol) {
+    public usuarios(String id, String nombre_completo, String correo, String password, String rol) {
         this.id = id;
         this.nombre_completo = nombre_completo;
         this.correo = correo;
-        this.username = username;
         this.password = password;
         this.rol = rol;
     }
@@ -41,14 +39,6 @@ public class usuarios {
 
     public void setCorreo(String correo) {
         this.correo = correo;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {

@@ -1,16 +1,16 @@
 package models;
 
-public class epicas {
+public class features {
     private String id;
-    private String proyecto_id;
+    private String epica_id;
     private String descripcion;
     private String nombre;
 
-    public epicas() {}
+    public features() {}
 
-    public epicas(String id, String proyecto_id, String descripcion, String nombre) {
+    public features(String id, String epica_id, String descripcion, String nombre) {
         this.id = id;
-        this.proyecto_id = proyecto_id;
+        this.epica_id = epica_id;
         this.descripcion = descripcion;
         this.nombre = nombre;
     }
@@ -23,12 +23,12 @@ public class epicas {
         this.id = id;
     }
 
-    public String getProyecto_id() {
-        return proyecto_id;
+    public String getEpica_id() {
+        return epica_id;
     }
 
-    public void setProyecto_id(String proyecto_id) {
-        this.proyecto_id = proyecto_id;
+    public void setEpica_id(String epica_id) {
+        this.epica_id = epica_id;
     }
 
     public String getDescripcion() {
@@ -42,8 +42,8 @@ public class epicas {
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 }
-

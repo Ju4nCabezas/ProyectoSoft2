@@ -6,10 +6,11 @@ import java.sql.SQLException;
 
 public class ConnectionDatabase {
 
-    private static final String url = "jdbc:postgresql://localhost:5432/educacion";
-    private static final String username = "postgres";
-    private static final String password = "gato123";
-
+    private static final String url =
+            "jdbc:postgresql://ep-calm-breeze-a4iu95vb-pooler.us-east-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_wZO64YtMShay&sslmode=require"; //base de datos prueba
+    // si ya todo esta hecho, se puede cambiar por esta "jdbc:postgresql://ep-calm-breeze-a4iu95vb-pooler.us-east-1.aws.neon.tech/educacion?user=neondb_owner&password=npg_wZO64YtMShay&sslmode=require"
+    private static final String username = "neondb_owner";
+    private static final String password = "npg_wZO64YtMShay";
 
     private ConnectionDatabase() {}
 
@@ -28,3 +29,6 @@ public class ConnectionDatabase {
         return null;
     }
 }
+
+
+
