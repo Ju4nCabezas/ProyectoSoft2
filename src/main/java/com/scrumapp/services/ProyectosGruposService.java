@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.scrumapp.DatabaseConnection;
 import com.scrumapp.models.ProyectoGrupos;
+import com.scrumapp.utils.DatabaseConnection;
 
 public class ProyectosGruposService {
 

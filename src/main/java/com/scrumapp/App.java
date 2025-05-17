@@ -2,6 +2,8 @@ package com.scrumapp;
 
 import java.sql.Connection;
 
+import com.scrumapp.utils.DatabaseConnection;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
