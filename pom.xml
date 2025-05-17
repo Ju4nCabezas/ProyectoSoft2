@@ -11,7 +11,7 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>24</version>
+            <version>24.0.1</version>
         </dependency>
         <!-- Libreria para encriptamiento -->
         <dependency>
@@ -43,7 +43,7 @@
                 </executions>
                 <configuration>
                     <mainClass>com.scrumapp.App</mainClass> <!-- Asegúrate de poner el paquete correcto -->
-                    <modulePath>D:/U/Septimo semestre/ProyectoSoft2/javafx-sdk-24/lib</modulePath> <!-- Ajusta la ruta -->
+                    <modulePath>C:/Program Files/Java/javafx-sdk-24.0.1/lib</modulePath> <!-- Ajusta la ruta -->
                 </configuration>
             </plugin>
 
