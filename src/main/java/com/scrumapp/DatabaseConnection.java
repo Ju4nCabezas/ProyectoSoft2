@@ -6,18 +6,24 @@ import java.sql.SQLException;
 
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:postgresql://localhost:5432/educacion";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "1234";
+    private static final String url =
+            "jdbc:postgresql://ep-calm-breeze-a4iu95vb-pooler.us-east-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_wZO64YtMShay&sslmode=require"; //base de datos prueba
+    // si ya todo esta hecho, se puede cambiar por esta "jdbc:postgresql://ep-calm-breeze-a4iu95vb-pooler.us-east-1.aws.neon.tech/educacion?user=neondb_owner&password=npg_wZO64YtMShay&sslmode=require"
+    private static final String username = "neondb_owner";
+    private static final String password = "npg_wZO64YtMShay";
 
     public static Connection getConnection() {
-        Connection conn = null;
         try {
-            conn = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Conexión exitosa a PostgreSQL!");
-        } catch (SQLException e) {
-            System.out.println("Error en la conexión: " + e.getMessage());
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
-        return conn;
+
+        try {
+            return DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
