@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="647.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SecondaryController">
+    <children>
+      <AnchorPane fx:id="background" prefHeight="780.0" prefWidth="1184.0">
+         <children>
+              <Label fx:id="bienvenido2" layoutX="272.0" layoutY="80.0" text="Bienvenido, USUARIO" />
+              <Button fx:id="secondaryButton" layoutX="1120.0" layoutY="14.0" onAction="#switchToPrimary" text="Volver" />
+            <ToolBar fx:id="toolbar" disable="true" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="695.0" prefWidth="92.0">
+               <padding>
+                  <Insets bottom="200.0" left="30.0" right="20.0" top="200.0" />
+               </padding>
+               <items>
+                  <FontAwesomeIconView glyphName="SLIDERS" size="30" wrappingWidth="12.571428298950195" />
+                  <Separator maxWidth="-Infinity" prefWidth="30.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Separator>
+                  <FontAwesomeIconView glyphName="CALENDAR" size="30" />
+                  <Separator maxWidth="-Infinity" prefWidth="30.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Separator>
+                  <FontAwesomeIconView glyphName="INBOX" size="30" />
+                  <Separator maxWidth="-Infinity" prefWidth="30.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Separator>
+                  <FontAwesomeIconView glyphName="PHONE" size="30" />
+                  <Separator maxWidth="-Infinity" prefWidth="30.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Separator>
+                  <FontAwesomeIconView glyphName="QUESTION" size="30" translateX="3.0" />
+               </items>
+            </ToolBar>
+            <VBox layoutX="249.0" layoutY="138.0" prefHeight="524.0" prefWidth="861.0" spacing="20.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="862.0" styleClass="pane" stylesheets="@primary.css">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="159.0" layoutX="43.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="titulogrupo" layoutX="221.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo 1" />
+                        <Button layoutX="221.0" layoutY="126.0" mnemonicParsing="false" onAction="#switchToEstudiantes" text="Lista de Estudiantes" />
+                        <Button layoutX="405.0" layoutY="126.0" mnemonicParsing="false" onAction="#switchToProyectos" stylesheets="@primary.css" text="Proyectos" />
+                        <Text layoutX="221.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Texto descripción, información, etc" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="862.0" styleClass="pane" stylesheets="@primary.css">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="159.0" layoutX="43.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="titulogrupo1" layoutX="221.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupo 2" />
+                        <Button layoutX="221.0" layoutY="126.0" mnemonicParsing="false" onAction="#switchToEstudiantes" text="Lista de Estudiantes" />
+                        <Button layoutX="405.0" layoutY="126.0" mnemonicParsing="false" onAction="#switchToProyectos" text="Proyectos" />
+                        <Text layoutX="221.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Texto descripción, información, etc" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>
