@@ -1,0 +1,122 @@
+/* Estilo general de fondo */
+#primary_root {
+    /* -fx-background-color: #c2b1e6; el morado de fondo */
+    -fx-background-image: url(./background.png);
+    background-image: url(./background.png);
+    background-repeat: no-repeat;
+    -fx-background-size: cover;
+    background-size: 1000px;
+    -fx-background-repeat: no-repeat;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+#background{
+
+    -fx-background-color: #ffffff;
+    background-color: #ffffff;
+}
+
+#toolbar{
+    -fx-background-color: #EADDFF;
+    background-color: #EADDFF;
+}
+
+.pane{
+
+    -fx-border-color: #aeaeae;
+    border-color: #aeaeae;
+    -fx-border-radius: 20px;
+    border-radius: 20px;
+
+}
+
+
+
+#bienvenido2, #titulo{
+
+    -fx-font-weight: bold;
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-font-size: 30px;
+}
+
+/* Texto de bienvenida */
+.label {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    /* -fx-font-weight: bold; */
+}
+
+#codigo,#contragrande{
+
+    -fx-font-weight: bold;
+}
+
+#contra,#profe{
+    -fx-font-size: 10px;
+    -fx-text-fill: gray;
+}
+
+#bienvenido{
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+}
+
+
+/* Contenedor del login */
+.anchor-pane {
+    -fx-background-color: white;
+    -fx-border-color: #00B0FF;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 1000px 0, 0, 4);
+}
+
+.font-awesome-icon-view{
+    -fx-border-width: 2px;
+}
+
+/* TextFields y PasswordFields */
+.text-field, .password-field {
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #333;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 12px;
+}
+
+/* Botón Sign In */
+.button {
+    -fx-background-color: #524b63;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #3d374a;
+}
+
+/* Links (simulados con Labels) */
+.label:hover {
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+/* Opcional: centrar VBox contenido */
+.vbox {
+    -fx-alignment: center;
+}
+
+#login{
+    -fx-background-color: #ffffff;
+    -fx-padding: 40px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 5px;
+}
