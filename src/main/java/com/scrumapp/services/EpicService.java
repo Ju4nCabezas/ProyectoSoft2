@@ -6,8 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.scrumapp.DatabaseConnection;
 import com.scrumapp.models.Epicas;
+import com.scrumapp.utils.DatabaseConnection;
 
 
 public class EpicService {

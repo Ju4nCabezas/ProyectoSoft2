@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.scrumapp.DatabaseConnection;
 import com.scrumapp.models.User;
+import com.scrumapp.utils.DatabaseConnection;
 import com.scrumapp.utils.EncryptUtils;
 
 public class AuthService {

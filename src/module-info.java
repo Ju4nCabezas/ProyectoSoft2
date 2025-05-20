@@ -1,8 +1,8 @@
-module com.scrumapp {
+module com.example {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
 
-    opens com.scrumapp to javafx.fxml;
-    exports com.scrumapp;
+    opens com.example to javafx.fxml;
+    exports com.example;
 }
