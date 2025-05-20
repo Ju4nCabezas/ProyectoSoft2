@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "ScrumApp/com.scrumapp.App",
+            "projectName": "ScrumApp"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.scrumapp/com.scrumapp.App",
+            "projectName": "ScrumApp"
+        },
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "Launch JavaFX App",
+            "mainClass": "com.scrumapp.App",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.15/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
