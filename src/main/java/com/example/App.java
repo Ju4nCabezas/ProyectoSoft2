@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.util.List;
 
 import com.scrumapp.utils.DatabaseConnection;
 
@@ -45,6 +46,9 @@ public class App extends Application {
     } catch (Exception e) {
         System.out.println("❌ Error de conexión: " + e.getMessage());
     }
+    EstudiantesController usuarioService = new EstudiantesController();
+    usuarioService.mostrarUsuarios();
+
 
         launch();
     }

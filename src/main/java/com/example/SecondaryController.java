@@ -19,4 +19,9 @@ public class SecondaryController {
     private void switchToProyectos() throws IOException {
         App.setRoot("proyectos");
     }
+
+    @FXML
+    private void switchToCrear() throws IOException {
+        App.setRoot("crear");
+    }
 }

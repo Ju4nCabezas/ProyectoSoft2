@@ -72,6 +72,7 @@
                   </Pane>
                </children>
             </VBox>
+            <Button layoutX="1111.0" layoutY="627.0" mnemonicParsing="false" onAction="#switchToCrear" text="Crear" />
          </children>
       </AnchorPane>
     </children>
