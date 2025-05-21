@@ -37,13 +37,14 @@ public class EpicService {
     }
 
     public boolean create(Epicas epica) {
-        String query = "INSERT INTO epicas (id, proyecto_id, descripcion) VALUES (?,?,?)";
+        String query = "INSERT INTO epicas (id, proyecto_id, descripcion,nombre) VALUES (?,?,?,?)";;
         try(Connection conn = DatabaseConnection.getConnection();
             PreparedStatement stmt = conn.prepareStatement(query)) {
 
             stmt.setString(1, epica.getId());
             stmt.setString(2, epica.getProyecto_id());
             stmt.setString(3, epica.getDescripcion());
+            stmt.setString(4, epica.getDescripcion());
             stmt.executeUpdate();
 
         } catch (SQLException er) {

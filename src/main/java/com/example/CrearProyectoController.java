@@ -86,5 +86,10 @@ private void crearProyecto() {
         App.setRoot("secondary");
     }
 
+    @FXML
+    private void switchToEpicas() throws IOException {
+        App.setRoot("epicas");
+    }
+
 }
 

@@ -5,6 +5,7 @@ public class Epicas {
     private String id;
     private String proyecto_id;
     private String descripcion;
+    private String nombre;
 
     public String getId() {
         return id;
@@ -28,6 +29,14 @@ public class Epicas {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+        public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
 }

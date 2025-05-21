@@ -56,6 +56,7 @@
             <TextField fx:id="descripcionField" layoutX="210.0" layoutY="251.0" prefHeight="26.0" prefWidth="319.0" />
             <Text layoutX="210.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creado Por" wrappingWidth="92.00000000000006" />
             <ComboBox fx:id="usuarioComboBox" layoutX="210.0" layoutY="355.0" prefHeight="26.0" prefWidth="319.0" />
+            <Button layoutX="256.0" layoutY="634.0" mnemonicParsing="false" onAction="#switchToEpicas" text="Ir a Epicas" />
                  </children>
               </AnchorPane>
             </children>

@@ -39,7 +39,11 @@ public class Proyectos {
             this.creado_por = creado_por;
         }
 
-        
+        @Override
+        public String toString() {
+            return nombre; // para mostrar el nombre del proyecto en el ComboBox
+        }
+
     }
 
 
