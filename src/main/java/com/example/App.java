@@ -18,6 +18,7 @@ import com.scrumapp.utils.DatabaseConnection;
 public class App extends Application {
 
     private static Scene scene;
+        private static FXMLLoader currentLoader;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -32,8 +33,11 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+    currentLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml")); // <-- ¡AQUÍ!
+    return currentLoader.load();
+}
+    public static <T> T getController() {
+        return currentLoader.getController();
     }
 
     public static void main(String[] args) { 

@@ -9,6 +9,7 @@ import java.util.UUID;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import com.scrumapp.models.Proyectos;
 import javafx.scene.control.ComboBox;
 
 public class CrearProyectoController {

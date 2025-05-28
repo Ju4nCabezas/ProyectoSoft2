@@ -2,14 +2,22 @@ package com.example;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import com.scrumapp.utils.DatabaseConnection;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import com.scrumapp.models.Proyectos;
+
 
 public class ProyectosGrupoController implements Initializable{
 
@@ -24,6 +32,9 @@ public class ProyectosGrupoController implements Initializable{
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
     }
+
+    
+
 
     @FXML
     private void generar() {

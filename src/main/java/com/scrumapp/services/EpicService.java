@@ -53,4 +53,31 @@ public class EpicService {
         }
         return true;
     }
+
+    public List<Epicas> obtenerEpicasPorProyecto(String proyectoId) {
+    List<Epicas> epicas = new ArrayList<>();
+    String query = "SELECT * FROM epicas WHERE proyecto_id = ?";
+
+    try (Connection conn = DatabaseConnection.getConnection();
+         PreparedStatement stmt = conn.prepareStatement(query)) {
+        
+        stmt.setString(1, proyectoId);
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {
+            Epicas epica = new Epicas();
+            epica.setId(rs.getString("id"));
+            epica.setProyecto_id(rs.getString("proyecto_id"));
+            epica.setNombre(rs.getString("nombre"));
+            epica.setDescripcion(rs.getString("descripcion"));
+            epicas.add(epica);
+        }
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return epicas;
+}
+
 }

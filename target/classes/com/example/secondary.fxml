@@ -70,6 +70,7 @@
                         <Text layoutX="221.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Texto descripción, información, etc" />
                      </children>
                   </Pane>
+                  <Button mnemonicParsing="false" onAction="#switchToTareas" text="Tareas" />
                </children>
             </VBox>
             <Button layoutX="1111.0" layoutY="627.0" mnemonicParsing="false" onAction="#switchToCrear" text="Crear" />
